@@ -43,13 +43,13 @@
 	</style>
 	<body>
 		<div style = "position:absolute;" class = "info">
-			<img height = "100px" class = "center" src = 'in-progress.svg'>
+			<img height = "100px" class = "center" src = "{{url_for('static', filename='in-progress.svg')}}">
 			<h2>Authentication in-progress, please wait...</h2>
 			<script>
 				const queryString = window.location.search;
 				const urlParams = new URLSearchParams(queryString);
 				var code = urlParams.get('code');
-				window.open("http://127.0.0.1:5000/auth/redirect"+"?code="+code,"_self");
+				window.open("http://127.0.0.1:6660/auth/redirect"+"?code="+code,"_self");
 				setTimeout("window.close()",3000); 
 			</script>
     	</div>
