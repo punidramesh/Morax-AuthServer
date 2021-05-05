@@ -22,8 +22,7 @@ def home():
 
 @app.route('/auth/redirect')
 def getResponse():
-	code = request.args.get('code')
 	if code != None:
-		return render_template('inprogress.html', code = code)
+		return render_template('inprogress.html')
 	else:
 		abort(404)

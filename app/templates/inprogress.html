@@ -49,7 +49,8 @@
 				const queryString = window.location.search;
 				const urlParams = new URLSearchParams(queryString);
 				var code = urlParams.get('code');
-				window.open("http://127.0.0.1:6660/auth/redirect"+"?code="+code,"_self");
+				var state = urlParams.get('state');
+				window.open("http://127.0.0.1:6660/auth/redirect"+"?code="+code +"&state="+state,"_self");
 				setTimeout("window.close()",3000); 
 			</script>
     	</div>
